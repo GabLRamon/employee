@@ -27,9 +27,6 @@ public class Main {
                     Rubble, Betty1, 4/4/1915, CEO, {avgStockPrize=300}
                     """;
 
-            Flyer flyer = new CEO("");
-            Programmer coder = new Programmer("");
-            coder.cook("hamburg");
 
             Matcher peopleMat = Employee.peoplePat.matcher(people);
             int totalSalaries = 0;
@@ -44,7 +41,7 @@ public class Main {
                 } else if (employee instanceof CEO ceo) {
                     System.out.println(ceo.toString());
                 } else {
-                    System.out.println(employee.defaultOutput());
+                    System.out.println();
                 }
                 employee = Employee.createEmployee(peopleMat.group());
                 System.out.println(employee.toString());
